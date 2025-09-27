@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Resume Generator</h1>
+    <button id="downloadBtn">📄 Download PDF</button>
+  </header>
+
+  <main class="layout">
+    <!-- Input Form -->
+    <section class="form-panel">
+      <h2>Enter Your Details</h2>
+      <form id="resumeForm">
+        <label>Full Name <input type="text" id="name" placeholder="Your Name"></label>
+        <label>Title/Role <input type="text" id="role" placeholder="AI/ML Student"></label>
+        <label>Email <input type="email" id="email" placeholder="you@example.com"></label>
+        <label>Phone <input type="text" id="phone" placeholder="+91 9876543210"></label>
+        <label>Location <input type="text" id="location" placeholder="Bengaluru, India"></label>
+        <label>Summary <textarea id="summary" placeholder="Short intro about yourself"></textarea></label>
+        <label>Education (one per line) <textarea id="education" placeholder="B.Tech AI/ML | XYZ College | 2026"></textarea></label>
+        <label>Experience (one per line) <textarea id="experience" placeholder="Intern | ABC Corp | 2024"></textarea></label>
+        <label>Projects (one per line) <textarea id="projects" placeholder="Resume Generator - Built with HTML/CSS/JS"></textarea></label>
+        <label>Skills (comma separated) <input type="text" id="skills" placeholder="Python, SQL, PyTorch"></label>
+      </form>
+    </section>
+
+    <!-- Resume Preview -->
+    <section class="preview-panel">
+      <div class="resume-card" id="resumePreview">
+        <header>
+          <h1 id="p-name">Your Name</h1>
+          <p id="p-role">Your Title</p>
+          <p class="r-meta">
+            <span id="p-email">you@example.com</span> • 
+            <span id="p-phone">+91 XXXXXXXX</span> • 
+            <span id="p-location">City, Country</span>
+          </p>
+        </header>
+
+        <section>
+          <h2>Summary</h2>
+          <p id="p-summary">A short summary goes here...</p>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <ul id="p-education"><li>No education added yet</li></ul>
+        </section>
+
+        <section>
+          <h2>Experience</h2>
+          <ul id="p-experience"><li>No experience added yet</li></ul>
+        </section>
+
+        <section>
+          <h2>Projects</h2>
+          <ul id="p-projects"><li>No projects added yet</li></ul>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <p id="p-skills">Python, HTML, CSS</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
