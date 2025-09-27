@@ -35,9 +35,3 @@ The generator is hosted on **GitHub Pages**:
 4. Click **📄 Download PDF** to save your resume.
 
 ---
-
-## 💻 Running Locally
-
-1. Clone the repo:
-```bash
-git clone https://github.com/YOUR-USE/Resume-generator.git
